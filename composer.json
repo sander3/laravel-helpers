@@ -1,16 +1,23 @@
 {
-    "name": "soved/laravel-matomo",
-    "description": "Plug and play server-side analytics",
-    "keywords": ["laravel", "matomo", "soved", "analytics", "server-side", "tracking"],
+    "name": "soved/laravel-helpers",
+    "description": "Generic Laravel helpers",
+    "keywords": ["laravel", "helpers", "soved"],
     "type": "library",
     "require": {
-        "php": "^7.3",
-        "laravel/framework": "~5.8",
-        "guzzlehttp/guzzle": "^6.3"
+        "php": "^7.4",
+        "laravel/framework": "~7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.2"
     },
     "autoload": {
         "psr-4": {
-            "Soved\\Laravel\\Matomo\\": "src/"
+            "Soved\\Laravel\\Helpers\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
         }
     },
     "license": "MIT",
@@ -24,7 +31,6 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Soved\\Laravel\\Matomo\\MatomoServiceProvider"
             ]
         }
     }
