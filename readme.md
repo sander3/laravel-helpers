@@ -1,6 +1,7 @@
 # Generic Laravel helpers
 
-![Laravel](https://github.com/sander3/laravel-helpers/workflows/Laravel/badge.svg)
+[![tests](https://github.com/sander3/laravel-helpers/workflows/Laravel/badge.svg)](https://github.com/sander3/laravel-helpers/actions?query=workflow%3ALaravel)
+[![codecov](https://codecov.io/gh/sander3/laravel-helpers/branch/master/graph/badge.svg)](https://codecov.io/gh/sander3/laravel-helpers)
 
 ## Requirements
 
