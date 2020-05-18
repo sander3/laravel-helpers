@@ -5,12 +5,14 @@ namespace Tests\Models;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Soved\Laravel\Helpers\Traits\HasCacheKey;
 use Soved\Laravel\Helpers\Traits\CachedRouteModelBinding;
 
 class Snapshot extends Model
 {
     use SoftDeletes;
     use CachedRouteModelBinding;
+    use HasCacheKey;
 
     /**
      * The attributes that are mass assignable.
