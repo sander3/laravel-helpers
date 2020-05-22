@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Feature;
 
 use Tests\TestCase;
 use Tests\Models\Snapshot;
@@ -28,7 +28,9 @@ class CachedRouteModelBindingTraitTest extends TestCase
 
         $cacheKey = $snapshot->getRouteCacheKey($snapshot->getRouteKey());
 
-        $this->assertEquals('9ebc714728c1b8ab93061f026388d7c4', $cacheKey);
+        $expectedCacheKey = '9ebc714728c1b8ab93061f026388d7c4';
+
+        $this->assertEquals($expectedCacheKey, $cacheKey);
     }
 
     public function testCachedRouteModelBinding(): void
