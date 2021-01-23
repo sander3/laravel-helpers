@@ -3,6 +3,8 @@
 [![tests](https://github.com/sander3/laravel-helpers/workflows/Laravel/badge.svg)](https://github.com/sander3/laravel-helpers/actions?query=workflow%3ALaravel)
 [![codecov](https://codecov.io/gh/sander3/laravel-helpers/branch/master/graph/badge.svg)](https://codecov.io/gh/sander3/laravel-helpers)
 
+[Buy me a coffee ☕️](https://www.buymeacoffee.com/sander3)
+
 ## Requirements
 
 - PHP >= 7.4
