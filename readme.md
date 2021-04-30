@@ -7,7 +7,7 @@
 
 ## Requirements
 
-- PHP >= 7.4
+- PHP 7.4 or higher
 - Laravel >= 8.0
 
 ## Security Vulnerabilities
