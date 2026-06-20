@@ -20,7 +20,7 @@ class CachedRouteModelBindingTraitTest extends TestCase
 
     public function testCacheKey(): void
     {
-        $snapshot = factory(Snapshot::class)->create([
+        $snapshot = Snapshot::factory()->create([
             'title' => 'Test Cache Key',
         ]);
 
@@ -35,7 +35,7 @@ class CachedRouteModelBindingTraitTest extends TestCase
 
     public function testCachedRouteModelBinding(): void
     {
-        $snapshot = factory(Snapshot::class)->create();
+        $snapshot = Snapshot::factory()->create();
 
         $cachedUrl = $snapshot->url;
 
@@ -56,7 +56,7 @@ class CachedRouteModelBindingTraitTest extends TestCase
 
     public function testForgetRouteCache(): void
     {
-        $snapshot = factory(Snapshot::class)->create();
+        $snapshot = Snapshot::factory()->create();
 
         $response = $this->get("cache/{$snapshot->getRouteKey()}");
 

@@ -1,11 +1,29 @@
 <?php
 
-use Tests\Models\Snapshot;
-use Faker\Generator as Faker;
+namespace Tests\Database\Factories;
 
-$factory->define(Snapshot::class, function (Faker $faker) {
-    return [
-        'title'           => $faker->sentence,
-        'url'             => $faker->url,
-    ];
-});
+use Tests\Models\Snapshot;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class SnapshotFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var class-string<\Tests\Models\Snapshot>
+     */
+    protected $model = Snapshot::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'title' => $this->faker->sentence(),
+            'url'   => $this->faker->url(),
+        ];
+    }
+}

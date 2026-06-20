@@ -5,11 +5,15 @@ namespace Tests\Models;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Tests\Database\Factories\SnapshotFactory;
 use Soved\Laravel\Helpers\Traits\HasCacheKey;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Soved\Laravel\Helpers\Traits\CachedRouteModelBinding;
 
 class Snapshot extends Model
 {
+    use HasFactory;
     use SoftDeletes;
     use CachedRouteModelBinding;
     use HasCacheKey;
@@ -39,5 +43,13 @@ class Snapshot extends Model
         $this->attributes['title'] = $value;
 
         $this->attributes['slug'] = Str::slug($value);
+    }
+
+    /**
+     * Create a new factory instance for the model.
+     */
+    protected static function newFactory(): Factory
+    {
+        return SnapshotFactory::new();
     }
 }

@@ -16,7 +16,7 @@ class HasCacheKeyTraitTest extends TestCase
 
     public function testCacheKey(): void
     {
-        $snapshot = factory(Snapshot::class)->create([
+        $snapshot = Snapshot::factory()->create([
             'title' => 'Test Cache Key',
         ]);
 
