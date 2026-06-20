@@ -42,6 +42,10 @@ jobs:
           ${{ runner.os }}-php-${{ matrix.php }}-laravel-${{ matrix.laravel }}-
     - name: Install Dependencies
       run: |
+        # The test matrix intentionally installs every supported framework
+        # release, including ones currently flagged by security advisories,
+        # so opt out of Composer's advisory-based install blocking here.
+        composer config --no-plugins policy.advisories.block false
         composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
         composer update --prefer-dist --no-ansi --no-interaction --no-progress
     - name: Execute tests (Unit and Feature tests) via PHPUnit
